@@ -1,0 +1,5 @@
+GUI - the GUI that client interacts with
+Parser - Parses the xml file to get the information requested
+Scraper - gets the data from the website
+Class - store info for a Class
+Major - store info for a major
