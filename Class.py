@@ -1,13 +1,14 @@
 import re
 
 class Class:
-    def __init__(self, name: str, code: str, desc: str, credit: int, offered: list, requisites: str) -> None:
+    def __init__(self, name: str = "", code: str = "", desc: str = "", credit: int = 0, offered: list = [], requisites: str = "", tables: list=[]) -> None:
         self.name = name
         self.code = code
         self.desc = desc
         self.credits = credit
         self.offered = offered
         self.requisites = self.parse_requisites(requisites)
+        self.tables = tables
         
     def parse_requisites(self, requisites: str) -> dict:
         if re.search("Prerequisites", requisites):
@@ -31,7 +32,6 @@ class Class:
                 
                 reqs["Prerequisites"].append(and_list)
             
-            print(reqs)
             return reqs
                        
         elif re.search("Co-requisites", requisites):
@@ -55,7 +55,6 @@ class Class:
                 
                 reqs["Co-requisites"].append(and_list)
             
-            print(reqs)
             return reqs     
         # elif re.search("Co-requisites", requisites):
 
