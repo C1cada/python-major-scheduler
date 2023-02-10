@@ -47,7 +47,7 @@ class Class:
                 and_list = []
                 if type(i) == list:
                     for course in i:
-                        if re.match("\w{4}-\d*", course):
+                        if re.match("\w{4}-\d{x1}", course):
                             and_list.append(course)
                 else:
                     if re.match("\w{4}-\d*", course):

@@ -62,5 +62,5 @@ def get_program_data(code: str) -> Program:
             
     return Program(courses, code, program_data.program.title.text)
     
-print(str(get_class_data("SWEN-262")))
-# print(repr(get_program_data("PSYC-BS")))
+# print(str(get_class_data("SWEN-262")))
+print(repr(get_program_data("SOFTENG-BS")))
